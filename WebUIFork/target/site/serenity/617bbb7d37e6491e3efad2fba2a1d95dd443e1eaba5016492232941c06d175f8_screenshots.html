@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="182bf221849bcb9fa23d6b86b606c585e33c2847cb559a666c41de393bd1ab61.html">Aplicar Codigo De Descuento</a></span>
+                > <span class="truncate-60"><a
+                    href="617bbb7d37e6491e3efad2fba2a1d95dd443e1eaba5016492232941c06d175f8.html">Cotizacion de viaje con descuento </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 15-04-2022 01:10</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Aplicar Codigo De Descuento </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario del aplicativo<br />
+Quiero conocer los el precio de un viaje<br />
+Para poder realizar análisis de dinámicas políticas inter y transcontinentales
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="fdecfa9c35b92047da2bb46da3a2c05ef108a04ec4d1ee7d00ad522026d17b00.html">
+                                    (FeatureName)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="94659e256fe33d8aad464762a066dc53e0a01c27ac82be68423877a36da1a364.html">Otizacion De Viaje Con Descuento
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="203ab481923bfeb6a4076cf933f3cdc3bda64fe678cc14f77524fe048392a1c1.html">Plicar Codigo De Descuento
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="d2132285552fd9b91cc6b9d1223188caaa09bea8a2886a1bf445af728199d734.html">
+                                    (ScenarioName)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Cotizacion de viaje con descuento
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f8006fc717671fc76a4ba8b8fe1387eb023e16da5048aab816a805e02c7c7fd6.png" title=" Dado que el usuario se encuentra en la pagina principal del aplicativo" width="1920"/>
+                <img src="904f51a99a57e34ce8a4e9e2246b3cefa6b01d8575753665bb961b7a3e3025ce.png" title=" Cuando cotiza su viaje a &quot;Shenji&quot; y aplica el codigo &quot;PROMO&quot;" width="1920"/>
+                <img src="904f51a99a57e34ce8a4e9e2246b3cefa6b01d8575753665bb961b7a3e3025ce.png" title=" User quote trip" width="1920"/>
+                <img src="904f51a99a57e34ce8a4e9e2246b3cefa6b01d8575753665bb961b7a3e3025ce.png" title=" User clicks on Destination List" width="1920"/>
+                <img src="b508ef52dc0f8660aa11d7d8918068eb007871b672b423d860b4c5d76f4bfc23.png" title=" User clicks on Destination List (completed)" width="1920"/>
+                <img src="b508ef52dc0f8660aa11d7d8918068eb007871b672b423d860b4c5d76f4bfc23.png" title=" User clicks on Babahoyo Destiny" width="1920"/>
+                <img src="a4b6629fca0e21f2d0ea7175d7123a93e2b64742f51c4ce86dffc63c0f850491.png" title=" User clicks on Babahoyo Destiny (completed)" width="1920"/>
+                <img src="a4b6629fca0e21f2d0ea7175d7123a93e2b64742f51c4ce86dffc63c0f850491.png" title=" User clicks on Book" width="1920"/>
+                <img src="064fc0062c2820f5f7ab25c50461daeffe1e6913993cf6ffa1a799fb3413b87c.png" title=" User clicks on Book (completed)" width="1920"/>
+                <img src="064fc0062c2820f5f7ab25c50461daeffe1e6913993cf6ffa1a799fb3413b87c.png" title=" User enters 'PROMO' into Promo code" width="1920"/>
+                <img src="f97994d656b49613b5063e8fab5bab2b380dd8bdef0927819d8a68829f6bb8f7.png" title=" User enters 'PROMO' into Promo code (completed)" width="1920"/>
+                <img src="f97994d656b49613b5063e8fab5bab2b380dd8bdef0927819d8a68829f6bb8f7.png" title=" User clicks on Apply promo code" width="1920"/>
+                <img src="a3f2ac7cdf20bc344fa45bcc99632feb9834bc937ac6e0e3f093cea99ddafd0f.png" title=" User clicks on Apply promo code (completed)" width="1920"/>
+                <img src="a3f2ac7cdf20bc344fa45bcc99632feb9834bc937ac6e0e3f093cea99ddafd0f.png" title=" User quote trip (completed)" width="1920"/>
+                <img src="a3f2ac7cdf20bc344fa45bcc99632feb9834bc937ac6e0e3f093cea99ddafd0f.png" title=" Cuando cotiza su viaje a &quot;Shenji&quot; y aplica el codigo &quot;PROMO&quot; (completed)" width="1920"/>
+                <img src="ff2d46188e62500ef3deddcc1278b251fc5fc39bcf7e57e0d06058b828200eef.png" title=" Entonces debera ver que el precio del viaje sin descuento es de &quot;1089.07&quot;" width="1920"/>
+                <img src="ff2d46188e62500ef3deddcc1278b251fc5fc39bcf7e57e0d06058b828200eef.png" title=" Then total price should be a string containing '1089.07'" width="1920"/>
+                <img src="e66a50491d771efbf0fc1850f2d46bf811a6822e3067a98ce84d9f170077123d.png" title=" Then total price should be a string containing '1089.07' (completed)" width="1920"/>
+                <img src="e66a50491d771efbf0fc1850f2d46bf811a6822e3067a98ce84d9f170077123d.png" title=" Entonces debera ver que el precio del viaje sin descuento es de &quot;1089.07&quot; (completed)" width="1920"/>
+                <img src="e66a50491d771efbf0fc1850f2d46bf811a6822e3067a98ce84d9f170077123d.png" title=" Y el precio con descuento sera de &quot;871.26&quot;" width="1920"/>
+                <img src="e66a50491d771efbf0fc1850f2d46bf811a6822e3067a98ce84d9f170077123d.png" title=" Then price with disscount should be a string containing '871.26': <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
